@@ -4,16 +4,16 @@ import pandas_datareader.data as web
 
 
 
-def shcode_load(num):
+def shcode_load(db_adr,id,pw,db_name):
     global shcode_list
     shcode_list = []
 
-    if(num==''):
-        num = 3000
+    if(db_adr == ''):
+        db_adr = 'localhost'
 
-    conn = pymssql.connect(host='jesus4000.ipdisk.co.kr:14333', user='jesus', password='Gkr7743s!', database='Project_GG',charset='utf8',as_dict=True)
+    conn = pymssql.connect(host=db_adr, user=id, password=pw, database=db_name,charset='utf8',as_dict=True)
     cur = conn.cursor()
-    sql01 = 'select top %d shcode from t8430 order by 1' % num
+    sql01 = 'select top 2 shcode from t8430 order by 1'
     cur.execute(sql01)
 
     for row in cur:
@@ -23,4 +23,4 @@ def shcode_load(num):
     return shcode_list
 
 
-print(shcode_load(2))
+print(shcode_load())
