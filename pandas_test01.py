@@ -11,16 +11,22 @@ def shcode_load(db_adr,id,pw,db_name):
     if(db_adr == ''):
         db_adr = 'localhost'
 
-    conn = pymssql.connect(host=db_adr, user=id, password=pw, database=db_name,charset='utf8',as_dict=True)
-    cur = conn.cursor()
-    sql01 = 'select top 2 shcode from t8430 order by 1'
-    cur.execute(sql01)
+    try:
+        conn = pymssql.connect(host=db_adr, user=id, password=pw, database=db_name,charset='utf8',as_dict=True)
+        cur = conn.cursor()
+        sql01 = 'select top 2 shcode from t8430 order by 1'
+        cur.execute(sql01)
 
-    for row in cur:
-        shcode_list = shcode_list + list(row.values())
+        for row in cur:
+            shcode_list = shcode_list + list(row.values())
 
-    conn.close()
-    return shcode_list
+        conn.close()
+        return shcode_list
+    except:
+        conn.close()
+        print('DB접속정보 확인요망')
+
+
 
 
 print(shcode_load())
