@@ -117,7 +117,7 @@ class pandas_data:
 
 
 
-a0 = pandas_data('jesus4000.iptime.org:14333','jesus','Gkr7743s!','Project_GG','','','shcode','hname','t8430','','',10,'pandas')
+a0 = pandas_data()
 a1 = a0.shcode_load()
 print(a1)
 a2 = a0.pandas_load(a1)
