@@ -147,7 +147,7 @@ class RunIns(Frame):
         if(self.labEntry01.get()=='gkr1'):
             a = pandas_data('localhost', 'jesus', '3477', 'test', '', '', 'shcode', 'hname', 'gubun', 't8430','', '', 5, 'pandas', 3)
         elif(self.labEntry01.get()=='gkr2'):
-            a = pandas_data('jesus4000.ipdisk.co.kr:14333', 'jesus', 'Gkr7743s!', 'Project_GG', '', '', 'shcode', 'hname', 'gubun', 't8430',self.labEntry11.get(), self.labEntry12.get(), self.labEntry13.get(), 'pandas',self.labEntry15.get())
+            a = pandas_data('', 'jesus', '', '', '', '', 'shcode', 'hname', 'gubun', 't8430',self.labEntry11.get(), self.labEntry12.get(), self.labEntry13.get(), 'pandas',self.labEntry15.get())
         else:
             a = pandas_data(self.labEntry01.get(),self.labEntry02.get(),self.labEntry03.get(),self.labEntry04.get(),self.labEntry05.get(),self.labEntry06.get(),self.labEntry07.get(),self.labEntry08.get(),self.labEntry09.get(),self.labEntry10.get(),self.labEntry11.get(),self.labEntry12.get(),self.labEntry13.get(),self.labEntry14.get(),self.labEntry15.get())
         a.shcode_load()
