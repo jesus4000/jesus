@@ -131,7 +131,7 @@ class pandas_data:
 
 
 
-a = pandas_data('jesus4000.ipdisk.co.kr:14333', 'jesus', 'Gkr7743s!', 'Project_GG', '', '', 'shcode', 'hname', 'gubun', 't8430','20100101', '', 0, 'pandas', 10000)
+a = pandas_data('', 'jesus', '', '', '', '', 'shcode', 'hname', 'gubun', 't8430','20100101', '', 0, 'pandas', 10000)
 b = a.shcode_load()
 
 for i in range(len(b)):
